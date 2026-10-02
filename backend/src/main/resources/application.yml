@@ -1,0 +1,20 @@
+spring:                              # everything Spring-related
+  application:
+    name: shopsphere-backend         # a name for your app (shows in logs, monitoring)
+
+  datasource:                        # where's the database?
+    url: jdbc:mysql://localhost:3307/shopsphere?...    # connect to localhost:3307
+    username: root                   # DB user
+    password: root                   # DB password
+    driver-class-name: com.mysql.cj.jdbc.Driver        # tells Java to use MySQL driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update               # auto-create/update tables from @Entity classes
+    show-sql: true                   # print SQL to console (great for learning)
+    properties:
+      hibernate:
+        format_sql: true             # make SQL pretty-printed
+
+server:
+  port: 8080                         # Tomcat listens on this port
